@@ -1,0 +1,420 @@
+a:link{
+	text-decoration: none;
+}
+ul{
+	list-style-type: none;
+}
+
+#cabecalho{
+padding-right: 30%;
+}
+
+
+@font-face {
+	font-family: 'cFont';
+	src: url('Chapaza.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;	
+}
+
+h1, h2, h3 ,h4, h5, h6, nav, button, #text-background, #aboutme, #texto2, #contact-form{
+	font-family: "Chapaza",cFont , "Times New Roman", Verdana, sans-serif;
+}
+
+
+.box {
+    float: left;
+	width: 50%;
+	padding: 5%;
+	background: red;
+	color: #fff;
+}
+
+
+#imagens_home {
+	display: flex;
+	justify-content: space-between;
+  }
+  
+  #imagens_home > div {
+	width: 200px;
+	height: 200px;
+  }
+
+#box-1 { 
+	background-image: url(../images/tim.png);
+	background-size: 100%;   
+	margin-left: 13%;
+	margin-top: 6%;
+	margin-bottom: 6%;
+}
+
+#box-2 { 
+	background-image: url(../images/unnamed.png);
+	background-size: 100%;  
+	margin-left: 2%;
+	margin-top: 6%;
+	margin-bottom: 6%;
+
+}
+
+#box-3 { 
+	background-image: url(../images/icones-prisma-educacao-infantil.png);
+	background-size: 100%;  
+	margin-left: 2%;
+	margin-top: 6%;
+	margin-right: 13%;
+	margin-bottom: 6%;
+}
+
+#divisor { background-color: white; }
+
+#aboutme{
+	color: #4eaf51;
+	font-size: 40px;
+	text-align: left;
+	padding: 5% 0px 0px 5%;
+    
+}
+
+#imagemPequena{
+	display: block;
+    margin: -13.6% auto;
+    width: 200px;
+    height: 150px;
+}
+
+#paragrafo2{
+	margin: 0% 0% 0% 48%;
+}
+
+
+#texto1{
+	color: black;
+	text-align: left;
+	font-size: 15px;
+	width: 20%;
+}
+
+#texto2{
+	color: black;
+	text-align: right;
+	font-size: 15px;
+	width: 50%;
+	margin-left: 40%;
+}
+
+
+#contact{
+	text-align: right;
+    padding-right: 21.3em;
+}
+
+#contact-form{
+	color: black;
+    font-size: 40px;
+    text-align: center;
+}
+
+#subject{
+	height: 400px;
+	padding-left: 40.5em;
+    height: 200px;
+}
+
+
+#central{
+	width: max-content;
+	height: max-content;
+}
+#text-background{
+	color: #ffffff;
+	text-align: right;
+	padding-right: 20.%;
+}
+#control{
+	padding: 20% 0px 0px 0px;
+}
+
+#text-iam{
+	color: #ffffff;
+	text-align: left;
+    padding-left: 28.2em;
+	font-size: 40px;
+}
+
+.logo{
+	width: 420px;
+	height: 64px;
+	background-image: url(../images/brincolorir_logo.png);
+	background-size: 100%;
+	background-repeat: no-repeat;
+	position: absolute;
+	left: 193px;
+}
+
+#divImagem{
+	background-image: url("../images/educação\ ensino\ infantil\ escola\ livros\ \(1\).jpeg");
+	height: 100%;
+	width: 100%;
+	background-attachment: fixed;
+	background-size: cover;
+	padding-bottom: 9%;
+}
+
+#button {
+	background-color: #4eaf51; 
+	border: none;
+	color: white;
+	padding: 7px 20px;
+	text-align: left;
+	display: inline-block;
+	font-size: 16px;
+	border-radius: 40%;
+	transition: all 0.5s;
+	cursor: pointer;
+	margin: 5px;
+
+  }
+
+
+#button span{
+	cursor: pointer;
+	display: inline-block;
+	position: relative;
+	transition: 0.5s;
+}
+
+#button span:after{
+	content: '\00bb';
+	position: absolute;
+	opacity: 0;
+	top: 0;
+	right: -20px;
+	transition: 0.5s;
+}
+
+#button:hover span{
+	padding-right: 10px;
+}
+
+#button:hover span:after {
+	opacity: 1;
+	right: 0;
+}
+
+
+
+
+
+
+#button:hover{
+	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+header,nav{
+    text-align: center;
+}
+#header_wrapper{
+	background-color: #ffffff;
+	border: solid 1px #797777;
+	height: 50px;
+}
+header h1{
+	font-size: 40px;
+	 color: #fff;
+	padding-top: 30px;
+}
+header img{
+	margin-top: 40px;
+}
+
+
+#text-portfolio{
+	padding-left:1.4em;
+}
+
+nav,nav ul{
+	height: 5px;
+}
+nav ul li{
+	display: inline-block;
+	margin: 5px;
+	padding:20px 10px;
+}
+
+#home2{
+	display: inline-block;
+	margin: -15px 0px 0px 1060px;
+	padding: 20px 10px;
+}
+
+
+nav ul li a{
+	font-size: 16px; 
+	color: black;
+	background: linear-gradient(90deg, red, orange, yellow, green, blue, purple);
+	background-clip: text;
+	-webkit-background-clip: text;
+}
+nav ul li.active a{
+	color: rgb(0, 0, 0);
+}
+nav ul li.active{ background-color: #ffffff;padding-left:20px;padding-right:20px; }
+nav ul li a:hover{
+	color: transparent;
+ 	transition: 500ms ease;
+}
+
+
+#slider_wrapper {
+	width: 100%;
+	height: 378px;
+	padding: 15px 400px;
+	background-color: #ffffff;
+	-webkit-box-shadow: inset 0 2px 3px rgba(0,0,0,.25);
+	-moz-box-shadow: inset 0 2px 3px rgba(0,0,0,.25);
+	box-shadow: inset 0 2px 3px rgba(0,0,0,.25); 
+}
+
+
+.nivo-controlNav{
+	display: none;
+}
+
+#three_parags{
+	margin: 65px 0;
+}
+.one_parag{
+	text-align: center;
+}
+.one_parag .icon_h2_wrapper{
+	width: 150px;
+	height: 126px;
+	padding-top: 20px;
+	background-color: #ffffff;
+	margin: 0 auto 20px;
+}
+.one_parag h2{
+	color: white;
+	font-size: 18px;
+	margin-top: 15px;
+}
+.one_parag p{
+	font-size: 14px; 
+	color: #6f6f6f;
+	padding: 0 20px;
+}
+
+#recents{
+	padding:30px 0px;
+	 background-color: #f7f7f7;
+	  border: solid 1px #ededed;
+}
+
+#recents h2{
+	font-size: 20px; 
+	color: #515151;
+}
+#recents h3{
+	font-size: 18px;
+	margin-bottom: 15px;
+}
+#from_blog p{
+	font-size: 12px; color: #808080;
+	padding-right: 20px;
+}
+#from_blog img{
+	float: left;
+	margin-right: 15px;
+	border: 2px solid  #ededed;
+}
+#from_portfolio p{
+	font-size: 14px; 
+	color: #808080;
+	margin-top: 20px;
+	text-align: center;
+}
+#recents hr{
+	background-color: #ededed;
+	margin: 15px 0 20px;
+}
+
+footer{
+	background: #000 url(../images/footer_texture.jpg) repeat top left;
+	padding: 30px 0;
+	font-size: 12px; color: #e4e4e4;
+}
+footer h3{
+	color: #fff;
+	margin-bottom: 10px;
+	font-size: 18px;
+}
+footer a{
+	color: #c4ea8c;
+}
+footer input,footer textarea{
+	border: none;
+	border-radius: 4px;
+	margin-bottom: 5px;
+}
+footer input{
+	height: 35px;
+}
+
+footer .one_tweet *{
+	padding: 0;
+	margin: 0;
+}
+footer #newsletter .newsletter_textfield_wrapper
+{
+	width: 230px;
+	height: 35px;
+	-webkit-border-radius: 3px/4px;
+	-moz-border-radius: 3px/4px;
+	border-radius: 3px/4px;
+	background-color: #fff;
+}
+footer #newsletter input[type="submit"]
+{
+	color: white;
+	width: 52px;
+	height: 35px;
+	-webkit-border-radius: 3px/4px;
+	-moz-border-radius: 3px/4px;
+	border-radius: 3px/4px;
+	background-color: #ffffff;
+}
+footer form input[type="submit"]{
+	padding: 10px 20px;
+	background-color: #ffffff;
+	color: #ffffff;
+	font-size: 12px;
+	border-radius: 0px;
+	display: block;
+	cursor: pointer;
+	font-style: italic; 
+	color: #000;
+}
+
+footer .one_tweet .date{
+	margin-bottom: 15px;
+	color: #bebebe;
+}
+footer hr{
+	background-color: #ffffff;
+	box-shadow: 0 1px #ffffff ;
+	margin-top: 5px;
+}
+footer .social_icons{
+	margin-top: 20px;
+	font-size: 18px; color: #26540f; text-shadow: 1px 1px rgba(255,255,255,.09);
+}
+footer .social_icons img{
+	padding: 0px 5px 0 3px;
+}
+footer .social_icons a img:hover{
+	background-color: #ffffff;
+}
+footer .copyright_info{
+	color: #ffffff; text-shadow: 1px 1px rgba(255,255,255,.09);
+}
