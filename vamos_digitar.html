@@ -3,7 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+        
+    <link  href="css/screen.css" media="screen" rel="stylesheet"/>
+    <link  href="css/style.css" media="screen" rel="stylesheet"/>
+    <title>Vamos digitar</title>
     <style>
         canvas {
             position: absolute;
@@ -16,6 +19,20 @@
     </style>
 </head>
 <body>
+    <div id="header_wrapper">
+	<header class="container">
+		<nav id=cabecalho class="span-12 last right">
+			<div class="logo"></div>
+			<ul class="right">
+				<li><a href="home.html">Home</a></li>
+				<li><a href="sobre.html">Sobre</a></li>
+				<li><a href="vamos_colorir.html">Vamos colorir</a></li>
+				<li><a href="instituicao.html">Instituição</a></li>
+				<li><a href="vamos_digitar.html">Vamos digitar</a></li>
+			</ul>
+		</nav>
+	</header>
+</div>
     <img id ="teclado" width='0' height='0' src="teclado.jpg">
     <canvas id="tela" width="800" height="500" style="border:1px solid #000000;">
     </canvas>
