@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        canvas {
+            position: absolute;
+            top: 0px;
+            bottom: 0px;
+            left: 0px;
+            right: 0px;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <img id ="teclado" width='0' height='0' src="teclado.jpg">
+    <canvas id="tela" width="800" height="500" style="border:1px solid #000000;">
+    </canvas>
+    <script>
+        var canvas = document.getElementById("tela")
+        var ctx = canvas.getContext("2d")
+        window.onload = function () {
+            var img = document.getElementById("teclado")
+            ctx.drawImage(img, 180, 150)
+        }
+        ctx.beginPath()
+        ctx.rect(378,65,18,5)
+        ctx.fill()
+        ctx.font = "37px Arial"
+        var txt = 'um texto muito legal que todos podemos digitar no brincolorindo.'
+        var txtdat = ''
+        ctx.strokeText(txt,377,60)
+        var dat = document.addEventListener("keydown", datilo)
+        var txtalt = 0
+        var vidas = 0
+        ctx.fillText("Erros: " + vidas,587,120)
+        function engine () {
+            txtalt++
+            void ctx.clearRect(0,0,800,150)
+            ctx.textAlign = 'start'
+            ctx.strokeText(txt.substring(txtalt),377,60)
+            ctx.textAlign = "right"
+            ctx.fillStyle = "green"
+            ctx.fillText(txt.substring(0,txtalt),350,30)
+            ctx.fillStyle = "black"
+            ctx.fillText(txtdat,350,60)
+            ctx.fillText("Erros: " + vidas,720,120)
+            ctx.fill()
+        }
+        function fail () {
+            txtalt++
+            void ctx.clearRect(0,0,800,150)
+            ctx.textAlign = 'start'
+            ctx.strokeText(txt.substring(txtalt),377,60)
+            ctx.fillStyle = "green"
+            ctx.textAlign = "right"
+            ctx.fillText(txt.substring(0,txtalt),350,30)
+            ctx.fillStyle = "black"
+            ctx.fillText(txtdat,350,60)
+            --vidas
+            ctx.fillText("Vidas: " + vidas,720,120)
+            ctx.fill()
+        }
+        function datilo (event) {
+            switch (event.keyCode) {
+                case 65:
+                    if (txt[txtalt] == "a") {
+                        txtdat += 'a'
+                        engine()
+                    } else {
+                        txtdat += 'a'
+                        fail()
+                    }
+                    break
+                case 66:
+                    if (txt[txtalt] == "b") {
+                        txtdat += "b"
+                        engine()
+                    } else {
+                        txtdat += 'b'
+                        fail()
+                    }
+                    break
+                case 67:
+                    if (txt[txtalt] == "c") {
+                        txtdat += "c"
+                        engine()
+                    } else {
+                        txtdat += 'c'
+                        fail()
+                    }
+                    break
+                case 68:
+                    if (txt[txtalt] == "d") {
+                        txtdat += "d"
+                        engine()
+                    } else {
+                        txtdat += 'd'
+                        fail()
+                    }
+                    break
+                case 69:
+                    if (txt[txtalt] == "e") {
+                        txtdat += "e"
+                        engine()
+                    } else {
+                        txtdat += 'e'
+                        fail()
+                    }
+                    break
+                case 70:
+                    if (txt[txtalt] == "f") {
+                        txtdat += "f"
+                        engine()
+                    } else {
+                        txtdat += "f"
+                        fail()
+                    }
+                    break
+                case 71:
+                    if (txt[txtalt] == "g") {
+                        txtdat += "g"
+                        engine()
+                    } else {
+                        txtdat += "g"
+                        fail()
+                    }
+                    break
+                case 72:
+                    if (txt[txtalt] == "h") {
+                        txtdat += "h"
+                        engine()
+                    } else {
+                        txtdat += "h"
+                        fail()
+                    }
+                    break
+                case 73:
+                    if (txt[txtalt] == "i") {
+                        txtdat += "i"
+                        engine()
+                    } else {
+                        txtdat += "i"
+                        fail()
+                    }
+                    break
+                case 74:
+                    if (txt[txtalt] == "j") {
+                        txtdat += "j"
+                        engine()
+                    } else {
+                        txtdat += "j"
+                        fail()
+                    }
+                    break
+                case 75:
+                    if (txt[txtalt] == "k") {
+                        txtdat += "k"
+                        engine()
+                    } else {
+                        txtdat += "k"
+                        fail()
+                    }
+                    break
+                case 76:
+                    if (txt[txtalt] == "l") {
+                        txtdat += "l"
+                        engine()
+                    } else {
+                        txtdat += "l"
+                        fail()
+                    }
+                    break
+                case 77:
+                    if (txt[txtalt] == "m") {
+                        txtdat += "m"
+                        engine()
+                    } else {
+                        txtdat += "m"
+                        fail()
+                    }
+                    break
+                case 78:
+                    if (txt[txtalt] == "n") {
+                        txtdat += "n"
+                        engine()
+                    } else {
+                        txtdat += "n"
+                        fail()
+                    }
+                    break
+                case 79:
+                    if (txt[txtalt] == "o") {
+                        txtdat += "o"
+                        engine()
+                    } else {
+                        txtdat += 'o'
+                        fail()
+                    }
+                    break
+                case 80:
+                    if (txt[txtalt] == "p") {
+                        txtdat += "p"
+                        engine()
+                    } else {
+                        txtdat += "p"
+                        fail()
+                    }
+                    break
+                case 81:
+                    if (txt[txtalt] == "q") {
+                        txtdat += "q"
+                        engine()
+                    } else {
+                        txtdat += "q"
+                        fail()
+                    }
+                    break
+                case 82:
+                    if (txt[txtalt] == "r") {
+                        txtdat += "r"
+                        engine()
+                    } else {
+                        txtdat += "r"
+                        fail()
+                    }
+                    break
+                case 83:
+                    if (txt[txtalt] == "s") {
+                        txtdat += "s"
+                        engine()
+                    } else {
+                        txtdat += "s"
+                        fail()
+                    }
+                    break
+                case 84:
+                    if (txt[txtalt] == "t") {
+                        txtdat += "t"
+                        engine()
+                    } else {
+                        txtdat += "t"
+                        fail()
+                    }
+                    break
+                case 85:
+                    if (txt[txtalt] == "u") {
+                        txtdat += "u"
+                        engine()
+                    } else {
+                        txtdat += "u"
+                        fail()
+                    }
+                    break
+                case 86:
+                    if (txt[txtalt] == "v") {
+                        txtdat += "v"
+                        engine()
+                    } else {
+                        txtdat += "v"
+                        fail()
+                    }
+                    break
+                case 87:
+                    if (txt[txtalt] == "w") {
+                        txtdat += "w"
+                        engine()
+                    } else {
+                        txtdat += "w"
+                        fail()
+                    }
+                    break
+                case 88:
+                    if (txt[txtalt] == "x") {
+                        txtdat += "x"
+                        engine()
+                    } else {
+                        txtdat += "x"
+                        fail()
+                    }
+                    break
+                case 89:
+                    if (txt[txtalt] == "y") {
+                        txtdat += "y"
+                        engine()
+                    } else {
+                        txtdat += "y"
+                        fail()
+                    }
+                    break
+                case 90:
+                    if (txt[txtalt] == "z") {
+                        txtdat += "z"
+                        engine()
+                    } else {
+                        txtdat += "z"
+                        fail()
+                    }
+                    break
+                case 32:
+                    if (txt[txtalt] == " ") {
+                        txtdat += " "
+                        engine()
+                    } else {
+                        txtdat += " "
+                        fail()
+                    }
+                    break
+                case 8:
+                    if (txtalt >= 1) {
+                    txtalt--
+                    txtdat = txtdat.substring(0,txtalt)
+                    txtalt--
+                    engine()
+                    }
+                    break
+                case 188:
+                    if (txt[txtalt] == ",") {
+                        txtdat += ","
+                        engine()
+                    } else {
+                        txtdat += ","
+                        fail()
+                    }
+                case 190:
+                    if (txt[txtalt] == ".") {
+                        txtdat += "."
+                        engine()
+                    } else {
+                        txtdat += "."
+                        fail()
+                    }
+                    break
+            }
+
+        }
+        function main() {
+            ALTURA = window.innerHeight
+            LARGURA = window.innerWidth
+            if (LARGURA >= 500) {
+                LARGURA = 600
+                ALTURA = 600
+            }
+        }
+    </script>
+
+</body>
+</html>
